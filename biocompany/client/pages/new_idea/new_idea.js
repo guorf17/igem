@@ -61,7 +61,9 @@ Page({
             setTimeout(function () {
               
               wx.redirectTo({
-                url: '/pages/radio/fawen/fawen?idea_id=' + res.data.idea_id
+               // url: '/pages/radio/fawen/fawen?idea_id=' + res.data.idea_id
+             //这里原来是新发布了一个idea之后直接跳转到发文章，现在改为跳转到idea列表10.10
+                url: '/pages/radio/mydiantai/mydiantai?view_avid=' + getApp().globalData.userInfo.avid 
               })//要延时执行的代码  
             }, 500)
 

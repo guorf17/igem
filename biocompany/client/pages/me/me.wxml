@@ -8,7 +8,7 @@
 
   <!--具体信息-->
   <view class="item">
-    <text>Self-introduction：</text>
+    <text>introduction：</text>
     <text hidden="{{!condition}}">{{intro?intro:"无"}}</text>
     <input auto-focus hidden="{{condition}}" bindblur="changeintro" />
   </view>
@@ -28,7 +28,7 @@
     <input hidden="{{condition}}" bindblur="changeproject"/>
   </view>
   <view class="item">
-    <text>Team Name：</text>
+    <text>Team：</text>
     <text hidden="{{!condition}}">{{radio?radio:"无"}}</text>
     <input hidden="{{condition}}" bindblur="changeradio"/>
   </view>
