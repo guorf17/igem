@@ -1,0 +1,117 @@
+<view class='text-name'>
+  <text>{{title}}</text>
+</view>
+
+<view class="page-body" wx:if="{{rtype=='sp'}}">
+  <view class="page-section tc">
+    <video  id="myVideo" src="{{rURL}}" controls></video>
+  </view>  
+</view>
+
+<view class="page-bodywz" wx:if="{{rtype=='wz'}}">
+  <view class="page-section tc" class="viewbtn">
+     <button  catchtap='viewwz' class="btn"> analyse file </button>
+  </view> 
+</view>
+
+
+<!--所属idea介绍-->
+<view class="myradio">
+  <view class="ava ">
+   
+    <view class='.myradio-info'>
+      <text>Belongs to idea: {{idea_title}}</text> 
+    </view>
+
+    <view class="myradio-button">
+      <image src="/images/zan.png" wx:if="{{!focus}}" catchtap='focus'></image>
+      <image src="/images/zan_selected.png" wx:if="{{focus}}"></image>
+      <text wx:if="{{good_num<1000}}">{{good_num}}</text>
+      <text wx:if="{{good_num>=1000}}">{{ex_good_num}}</text>
+      <text>follower</text>
+    </view> 
+
+  </view>
+</view>
+
+<!--所属电台介绍-->
+
+<view class="user flex-wrp " catchtap='todiantai'>
+
+  <view class="avatar ">
+    <image class="userinfo-avatar" src="{{touxiang}}" background-size="cover"></image>
+  </view>
+
+  <view class="user-info flex-item">
+    <view class="userinfo-all">
+      <a>
+        <view>
+          <text class="userinfo-nickname">Team Name:{{ming}}</text>
+        </view>
+        <view>
+          <text class="userinfo-nickname">{{xuexiao}}</text>
+        </view>
+      </a>
+    </view>
+  </view>
+  
+</view>
+
+
+
+
+
+
+<!-- comment部分开始 -->
+<block wx:for="{{comments}}" wx:for-index="idx" wx:for-item="item">
+
+  <view class="answer-feed">
+    <view class="feed-item">
+      <view class="feed-source " catchtap="seeinfor" data-id="{{item.feed_source_id}}">
+        <image class="userinfo-avatar" src="{{item.avatar}}"></image>
+        <view class='nametext'>
+         <text>{{item.name}}</text>
+        </view>
+      </view>
+
+      <view class="feed-content">
+        <view class="answer-body">
+          <view>
+            <text class="answer-txt"> </text>{{item.detail}} </view>
+          <view class="timectn">
+        <!--    <text><!--发布时间--{{item.time}}</text>   -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+ 
+
+
+
+<!-- comment部分结束 -->
+
+<!-- 防止最后一个被遮住 -->
+<view class='kongge'></view>
+
+
+<view class="send-footer flex-wrp">
+  <view class="operation-wrp flex-item">
+    <view class="operation flex-wrp flex-tab">
+
+      <view class="operation-btn flex-item" bindtap='into_dashang'>
+        <image src="/images/dashang.png"></image>
+        <text>Reward the idea</text>
+      </view>
+
+      <view class="operation-btn flex-item" bindtap='bindQueTap' data-rid="{{item.radio_ID}}">
+        <image class="ima-write" src="/images/write.png"></image>
+        <text  >Comment</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+ 

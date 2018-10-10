@@ -1,0 +1,40 @@
+{
+ "pages":["pages/radio/radio","pages/me/me","pages/QA/QA","pages/newq/newq",
+  "pages/my/my","pages/my/xinxi/xinxi","pages/my/idea/idea","pages/newa/newa","pages/picture/picture","pages/question/question","pages/user_info/user_info","pages/radio/fawen/fawen","pages/my/huida/huida","pages/my/wenti/wenti","pages/radio/login/login","pages/radio/zhuce/zhuce",
+  "pages/shouquan/shouquan","pages/radio/mydiantai/mydiantai","pages/radio/wzxiangqing/wzxiangqing","pages/radio/pinglun/pinglun",
+"pages/new_idea/new_idea",
+"pages/radio/idealiebiao/idealiebiao",
+  "pages/article/article","pages/radio/lianxi/lianxi"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4169E1",
+    "navigationBarTitleText": "Biocompany",
+    "navigationBarTextStyle": "white"
+  },
+ "tabBar":{
+   "list":[
+    {
+      "text":"Ideas",
+      "pagePath":"pages/radio/radio",
+      "iconPath":"images/icons/idea.png",
+      "selectedIconPath":"images/icons/idea2.png"
+    },
+    {
+      "text": "Q&A",
+      "pagePath": "pages/QA/QA",
+      "iconPath": "images/icons/QA.png",
+      "selectedIconPath": "images/icons/QA2.png"
+    },
+    {
+      "text": "Me",
+      "pagePath": "pages/my/my",
+      "iconPath": "images/icons/me.png",
+      "selectedIconPath": "images/icons/me2.png"
+    }
+   ],
+  "color": "#778899",
+  "selectedColor": "#4169E1"
+   }
+
+}

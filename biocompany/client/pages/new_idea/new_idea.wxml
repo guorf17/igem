@@ -1,0 +1,27 @@
+
+<!--pages/newa/newa.wxml--> 
+<form bindsubmit="formSubmit">
+
+  <text class='title'>Please fill in the basic information of idea first:</text>
+  <input name="title" placeholder="Please enter the name of the idea" />
+  <textarea name="detail"  placeholder="Please enter a sentence description" />
+  <view class='shangchuan' style="margin-top:20rpx">
+         
+    <view class='upload-img'>
+      <text>Click to upload cover:</text>
+      <view  wx:if="{{cover}}">
+        <image style="width: 370rpx;height:233rpx;" mode='aspectFill' catchtap='UploadPicture' src="{{cover}}" ></image>
+      </view>
+
+      <view wx:else>
+        <image style="width: 370rpx;height:233rpx;" mode='aspectFill' catchtap='UploadPicture' src="{{cover}}"></image>
+        <text style="color: #cccccc;display:block;">（Default cover）</text>
+      </view>
+    </view>
+ 
+  </view>
+
+  <button  formType="submit">Publish</button>
+</form>
+
+ 

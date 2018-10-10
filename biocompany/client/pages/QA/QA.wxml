@@ -1,0 +1,47 @@
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="search flex-wrp">
+    <view class="search-left flex-item">
+      <image src="../../images/sss.png"></image>
+      <input  confirm-type="search" bindconfirm="search"/>
+    </view>
+    <view class="search-right flex-item" bindtap="newq">
+      <image src="../../images/edit.png"></image>
+    </view>
+  </view>
+  <view class='content-wrapper'>
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+    <view class="feed-item" catchtap="bindQueTap" data-qid="{{item.question_id}}">
+      <view class="avatar">
+        <image src="{{item.feed_source_img}}"></image>
+         <text class="textname">{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+      </view>
+      <view class="feed-source">    
+        <view class="feed-content">
+          <view class="question"  >
+            <a class="question-link">
+              <text>{{item.question}}</text>
+            </a>
+          </view>
+          <view class="answer-body">
+            <view bindtap="bindItemTap">
+              <text class="answer-text" aid="{{answer_id}}">{{item.answer_ctnt}}</text>
+            </view>
+            <view class="answer-actions" bindtap="bindItemTap">
+              <view class="like">
+                <image src='../../images/eye.png'></image>
+                <a>{{item.good_num}} </a>
+              </view>
+              <view class="comments">
+                <image src='../../images/c.png'></image>
+                <a>{{item.comment_num}} </a>
+              </view>
+
+            </view>
+          </view>
+        </view>  
+      </view>
+      <image class="item-more" mode="aspectFit" src="../../images/more.png"></image>
+    </view>
+  </block>
+  </view>
+</scroll-view>

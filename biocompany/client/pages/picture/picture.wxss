@@ -1,0 +1,32 @@
+.image-list {
+  text-align: center;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+
+.image-item {
+  width: 340rpx;
+  height: 340rpx;
+  
+}
+.item-wrapper {
+  position: relative;
+  border-radius:30rpx;
+  background-color: #fff;
+  width: 360rpx;
+  height: 370rpx;
+  padding:20rpx 10rpx 0;
+  box-sizing:border-box;
+  margin-top: 10rpx;
+
+}
+.item-wrapper text{
+  position: absolute;
+  width:45rpx;
+  height:45rpx;
+  background:#0067cf;
+  border-radius:30rpx;
+  color:#fff;
+  font-size:28rpx;
+}

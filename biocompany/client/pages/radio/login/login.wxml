@@ -1,0 +1,18 @@
+<view class = "container-login">
+  <form bindsubmit="formSubmit">
+
+    <view class = "account">
+      <input name="zhanghu" class = "logininput"  placeholder="Please input Username"    placeholder-class="login-placeholder"></input>
+    </view>
+
+    <view class = "code">
+      <input name="mima" class = "logininput"  placeholder="Please input password" placeholder-class="login-placeholder" password = "true"></input>
+    </view>
+
+    <view class = "login">
+      <button class='login-btn' formType="submit">Log in</button>
+    </view>
+
+    <view class='sign-up'><a catchtap='tozhuce'>Apply for a Team account</a></view>
+  </form>
+</view>

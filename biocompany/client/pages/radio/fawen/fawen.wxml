@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<form bindsubmit="formSubmit">
+
+  <view>
+    <text>Article title: </text>
+    <input placeholder='Please enter a article title' name="title" />
+  </view>
+
+  <view class='upload-img'>
+    <text>Click to upload cover:</text>
+    <view  wx:if="{{cover}}">
+      <image  style="width: 370rpx;height:233rpx;" mode='aspectFill' catchtap='UploadPicture' src="{{cover}}"></image>
+    </view>
+    <view wx:else>
+      <image  style="width: 370rpx;height:233rpx;" mode='aspectFill' catchtap='UploadPicture' src="{{cover}}" ></image>
+      <text style="color: #cccccc;display:block;">（Default cover）</text>
+    </view>
+  </view>
+
+  <view class="btn-container">
+    <view class="list">
+      <button type="primary" class="button" catchtap="videoUpload" hidden='{{hidesp}}'>I want to send a video.</button>
+    </view>
+  </view>
+
+
+  <view class="btn-container">
+    <view class="list">
+      <button type="primary" class="button" catchtap="fileUpload" hidden='{{hidewz}}'>I want to send an article</button>
+    </view>
+  </view>
+
+  <block wx:for="{{editlist}}" wx:for-index="idx" wx:for-item="item">
+    <textarea wx:if="{{item._type=='text'}}" bindblur='inputover' data-index="{{idx}}" maxlength='-1'></textarea>
+    <view class='upload-img'>
+    <view>
+    <image wx:if="{{item._type=='img'}}" src="{{item.content}}" style='width : 200px; height : 100px;'></image>
+    </view>
+    </view>
+    <view style="text-align: center;" >
+    <image src="/images/icons/delete1.png" style="height:50rpx; width:50rpx;" catchtap='del' data-index="{{idx}}"></image></view>
+  </block>
+
+
+  <view hidden='{{!hidesp}}' class="insert">
+    <text catchtap='inserttext'>Insert text</text>
+    <text>|</text>
+    <text catchtap='insertpicture'>Insert picture</text>
+  </view>
+
+
+  <button catchtap="overedit" hidden='{{!hidesp}}'>End editing</button>
+  <button formType="submit" hidden='{{hidepost}}'>Publish</button>
+</form>
+
+ 

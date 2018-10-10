@@ -1,0 +1,50 @@
+<view class="container more">
+  <view class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="{{avatar}}" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+      <text class="userinfo-nickname">{{name}}</text>
+      <text class="edit" bindtap='click_readme'>Set my profile</text>
+    </view>
+  </view>
+</view>
+
+<view class="my">
+    <view class="my-item flex-wrp" bindtap='click_my_idea'>
+      <view class="myitem-icon flex-item" >
+        <image src="/images/guanzhuidea.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>Favorite ideas</text>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp" bindtap ='click_my_question'>
+      <view class="myitem-icon flex-item" >
+        <image src="/images/wenti.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>My Q&A</text>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp" bindtap='click_my_answer'>
+      <view class="myitem-icon flex-item" >
+        <image src="/images/huida.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>My comments</text>
+      </view>
+    </view>
+
+    <view class="my-item flex-wrp" bindtap='click_my_notice_question'>
+      <view class="myitem-icon flex-item" >
+        <image src="/images/lights.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>Favorite Q&A</text>
+      </view>
+    </view>
+
+  </view>

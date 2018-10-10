@@ -1,0 +1,6 @@
+<view class="article_container">
+  <block wx:for="{{wz}}" wx:for-index="idx" wx:for-item="item">
+    <rich-text wx:if="{{item._type=='text'}}"  nodes="<div style='width :80%;margin:  20px auto;word-wrap:break-word;word-break:break-all'>{{item.content}}</div>"></rich-text>
+    <rich-text wx:if="{{item._type=='img'}}"   catchtap='zoom' data-src='{{item.content}}' nodes="<img style='width : 200px; height : 150px;display:block; margin: 20px auto;'  src='{{item.content}}'/>"></rich-text>
+  </block> 
+</view>

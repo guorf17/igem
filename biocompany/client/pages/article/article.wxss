@@ -1,0 +1,8 @@
+/* pages/article/article.wxss */
+
+.article_container { 
+background-color: white;
+height: 100%;
+}
+
+ 

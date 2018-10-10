@@ -1,0 +1,62 @@
+<!--idea的头像和名称和点赞数--> 
+<view class="myradio">
+  <view class="ava flex-item">
+    
+      <view class="">
+      <image class="myradio-avatar" src="{{cover}}" mode='aspectFill' background-size="cover"></image>
+      </view>
+      <view class="myradio-text">
+        <text class='name'>{{title}}</text>
+        <text class='like'>  {{good_num}} followers</text>
+      </view>
+
+  </view>
+  <button wx:if="{{myavid==thisavid}}" class="myradio-button" size='mini' bindtap="fawen">Publish article</button>
+</view>
+
+<!-- idea中的文章或者视频-->
+<view class="row-container" bindtap='click_into_content'>
+  <view class="content-wrapper">
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item">
+
+      <!-- List Item begin -->
+      <view class="content-list" >
+      <!--  <navigator class='item'>   -->
+      <view class="item">    
+<!--新改：  点击当前封面图片才能跳转到内容-->
+          <view class="top" data-rid="{{item.radio_ID}}" bindtap="bindQueTap">
+            <view class="cover-img" style="opacity: 1">
+              <image class='image' src="{{item.coverImg}}" mode='aspectFill'></image>
+            </view>
+          </view>
+
+          <view class="info">
+            <view classs="cell-center flex-wrp">
+
+              <view class="cell left">
+                <image class="cell-image" src="/images/c.png"></image>
+                <text class="cell-text">{{item.comment_num}}</text>
+              </view>
+
+<!--删除idea下的某篇文章-->
+ <!--1、删除按钮显示条件：登陆了当前团队账号时：wx:if="{{myavid==thisavid}}"
+ 此处myavid为global avid，thisavid为后台返回的avid
+     此函数js已写或待写
+  -->
+            <view class='cell right'>
+            <image wx:if="{{myavid==thisavid}}" class="delete-image" src="/images/icons/delete.png" data-rid="{{item.radio_ID}}" catchtap='deleteArticle'></image>
+            </view>
+
+            </view>
+
+
+            <view class="title">{{item.title}}</view>
+          </view>
+
+       </view>   
+    <!--  </navigator>       --> 
+      </view>
+      <!-- List Item end -->
+    </block>
+  </view>
+</view>

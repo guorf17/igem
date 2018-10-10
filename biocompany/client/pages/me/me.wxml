@@ -1,0 +1,47 @@
+<!--pages/me/me.wxml-->
+<view class="container2">
+  <!--头像+昵称-->
+  <view class="avatar">
+    <image bindtap="changeAvatar" src="{{ avatar }}" />
+  </view>
+  <view class="name">{{ name }}</view>
+
+  <!--具体信息-->
+  <view class="item">
+    <text>Self-introduction：</text>
+    <text hidden="{{!condition}}">{{intro?intro:"无"}}</text>
+    <input auto-focus hidden="{{condition}}" bindblur="changeintro" />
+  </view>
+  <view class="item">
+    <text>Role：</text>
+    <text hidden="{{!condition}}">{{status?status:"无"}}</text>
+    <input hidden="{{condition}}" bindblur="changestatus"/>
+  </view>
+  <view class="item">
+    <text>School：</text>
+    <text hidden="{{!condition}}">{{school?school:"无"}}</text>
+    <input hidden="{{condition}}" bindblur="changeschool"/>
+  </view>
+  <view class="item">
+    <text>Project：</text>
+    <text hidden="{{!condition}}">{{project?project:"无"}}</text>
+    <input hidden="{{condition}}" bindblur="changeproject"/>
+  </view>
+  <view class="item">
+    <text>Team Name：</text>
+    <text hidden="{{!condition}}">{{radio?radio:"无"}}</text>
+    <input hidden="{{condition}}" bindblur="changeradio"/>
+  </view>
+  <view class="item">
+    <text>Email：</text>
+    <text hidden="{{!condition}}">{{email?email:"无"}}</text>
+    <input hidden="{{condition}}" bindblur="changeemail"/>
+  </view>
+</view>
+
+<!--按钮-->
+<view>
+  <button hidden="{{!condition}}" bindtap="editinfor">Edit</button>
+  <button hidden="{{condition}}" bindtap="postinfor">Submit</button>
+</view>
+ 

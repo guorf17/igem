@@ -1,0 +1,23 @@
+<!--pages/newq/newq.wxml--> 
+<form bindsubmit="formSubmit">
+  
+  <text class='title'>Title</text>
+  <input  placeholder='Please enter a title' name="title" />
+  <text class='title'>Topic details</text>
+  <textarea name="detail" placeholder="Please enter the topic details" />
+
+  <view style="display:block;">
+    <text class='title'>Click to upload cover:</text>
+    <image style="height:40rpx; width:40rpx" src="/images/upload56.png" bindtap='UploadPicture'></image>
+  </view>
+  <view class="download-img">
+    <text class='title'>Uploaded image:</text>
+
+    <block wx:for="{{pictures}}" wx:for-index="idx" wx:for-item="item">
+      <image class="img" src="{{item}}" style="height:500rpx; width:500rpx;"></image>
+    </block>
+  </view>
+
+  <button  formType="submit">Publish</button>
+</form>
+ 

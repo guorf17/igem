@@ -1,0 +1,26 @@
+<!--<view class ="newquestionsctn">
+  <form bindsubmit="formSubmit">
+
+    <view class="qtitle" >
+      <text>写下评论</text>
+    </view>
+
+    <scroll-view scroll-y style="height: 1030rpx;">
+      <view class = "line"></view>
+
+      <view class="textarea-wrp">
+        <textarea name="detail" auto-focus="true" maxlength='-1' style="height: 29em" placeholder='请输入详细评论'/>
+      </view>
+
+      
+    </scroll-view>
+  </form>
+</view>
+-->
+<!--pages/newa/newa.wxml--> 
+<form bindsubmit="formSubmit">
+  <text class='title'>Write a comment：</text>
+  <textarea name="detail" maxlength='500' placeholder="Please enter a detailed comment" auto-focus="true" />
+ 
+  <button  formType="submit">Send</button>
+</form>

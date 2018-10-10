@@ -1,0 +1,8 @@
+<view class='image-list'>
+  <block wx:for="{{pictures}}" wx:for-index="idx" wx:for-item="item">
+  <view class='item-wrapper'>
+    <text>{{idx + 1}}</text>
+    <image class='image-item' src="{{item}}" catchtap='zoom' data-src="{{item}}"></image>
+  </view>
+  </block> 
+</view>

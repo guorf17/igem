@@ -1,0 +1,122 @@
+
+
+<view class="page"   bindtouchend='touchend' bindtouchstart='touchstart'>  
+  <!-- 侧滑栏   -->
+  <view class="page_tab"   style='display:{{display}}'>  
+
+    <image class='user_head' src='{{avatar}}'></image>  
+    <block wx:if="{{ avid==''}}">  
+      <view class='user_name'>Not logged in</view>  
+    </block>  
+    <block wx:if="{{ avid!=''}}">    
+      <view class='user_name'>{{user_name}}</view>  
+    </block> 
+
+    <view class="page_tab_content">  
+
+      
+        <view wx:if="{{avid!=''}}" class="wc" catchtap='tomydiantai'>  
+          <image src='/images/flag.png'></image>  
+          <text>My Team</text>  
+        </view>  
+     
+      
+      <navigator url='../new_idea/new_idea'> 
+      <view wx:if="{{avid!=''}}" class="wc">  
+        <image src='/images/write.png'></image>  
+        <text>Publish idea</text>  
+      </view>  
+     </navigator>  
+
+      <navigator url='./lianxi/lianxi'> 
+        <view class="wc">  
+          <image src='../../images/help.png'></image>  
+          <text>contact us</text>  
+        </view>  
+      </navigator>  
+
+      <navigator url='login/login'> 
+        <view wx:if="{{avid==''}}" class="wc">  
+          <image src='../../images/login.png'></image>  
+          <text>Login to Team</text>  
+        </view>  
+      </navigator> 
+
+      <view wx:if="{{avid!=''}}" class="wc">  
+        <image src='/images/user-unlogin.png'></image>  
+        <text catchtap='logout'>Log out</text>  
+      </view> 
+
+    </view>  
+  </view>  
+  <view class="bg" style='display:{{display}}'></view>  
+<view class="bg"></view>  
+ <!--  主页 -->
+  <view class="home" style="{{translate}}"> 
+    <scroll-view scroll-y="true" class="ridio-container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class="search flex-wrp">
+
+        <view class="search-left" bindtap="upper">
+          <image src="/images/right-arrow17.png"></image>
+        </view>
+
+        <view class="search-right flex-item">
+          <image src="../../images/sss.png"></image>
+          <input name="detail" confirm-type="search" bindconfirm="search"/>
+        </view>   
+
+      </view>
+  
+        <view class='change' catchtap='refresh'>
+          <text >Click here to change a batch</text>
+          <image src='/images/icons/circular143.png'></image>
+        </view>
+ 
+        <view class="row-container">
+          <view class="content-wrapper">
+            <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item">
+
+              <!-- List Item begin -->
+              <view class="content-list" bindtap="bindQueTap" data-rid="{{item.radio_ID}}" >
+                <view class="item">
+
+                  <view class="top">
+                    <view class="cover-img" style="opacity: 1">
+                      <image mode='aspectFill' src ="{{item.coverImg}}"></image>
+                    </view>
+                  </view>
+
+                  <view class="info">       
+                    <view classs="cell-center ">                   
+                      <view class="title">{{item.title}}</view>
+                      <view class="cell left flew-wrp">
+                          <image class ="cell-image" src="/images/c.png"></image>
+                          <text calss ="cell-text">{{item.comment_num}}</text>
+                          <view class='cell-time'>
+                          <text>{{item.time}}</text>
+                          </view>
+                      </view>
+                    </view>  
+                  </view>
+              </view>
+            </view>
+            <!-- List Item end -->
+
+          </block>
+        </view>
+      </view>
+<!--cell板块结束-->
+    </scroll-view>  
+  </view> 
+</view>  
+
+
+
+<!--弹出框-->
+<modal title="First use guide" hidden="{{hiddenModal}}" confirm-text="Finished" bindconfirm="listenerConfirm" no-cancel>
+<view class="guide">
+  <image src="/images/right-arrow17.png" mode="aspectFill"></image>  
+     <text> Thank you for your use~</text>
+     <text>Home right slide to open the Group management interface</text> 
+     </view>
+     </modal>

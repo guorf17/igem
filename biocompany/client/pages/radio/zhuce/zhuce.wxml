@@ -1,0 +1,30 @@
+<view class = "container-login" >
+  <form bindsubmit="formSubmit" style='margin-top:20rpx;'>
+  <view style='  text-align:center;color:#eee'>
+ <text>Click to upload avatar</text></view>
+    <view class="avatar">
+      <image catchtap='UploadPicture' src="{{pictures}}"></image>
+    </view>
+
+    <view class = "name">
+      <input  name="ming" class = "logininput"  placeholder="Please enter the Team name"    placeholder-class="login-placeholder"></input>
+    </view>
+
+    <view class = "school">
+      <input name="xuexiao" class = "logininput"  placeholder="Please enter your school" placeholder-class="login-placeholder"></input>
+    </view>
+
+
+    <view class = "account">
+      <input name="zhanghu" class = "logininput"  placeholder="Please input Username"    placeholder-class="login-placeholder"></input>
+    </view>
+
+    <view class = "code">
+      <input name="mima" class = "logininput"  placeholder="Please input password" placeholder-class="login-placeholder"></input>
+    </view>
+
+    <view class = "login">
+      <button class='login-btn' formType="submit" plain='true'>Apply</button>
+    </view>
+  </form>
+</view>

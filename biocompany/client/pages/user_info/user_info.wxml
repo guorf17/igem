@@ -1,0 +1,33 @@
+<!--pages/user_infor/user_infor.wxml--> 
+<view class="container_me">
+  <view class="avatar">
+    <image bindtap="changeAvatar" src="{{ infor.avatar }}" />
+  </view>
+  <view class="name">{{ infor.name }}</view>
+  <view class="item">
+    <text>Self-introduction：</text>
+    <text>{{infor.intro?infor.intro:"无"}}</text> 
+  </view>
+  <view class="item">
+    <text>Role：</text>
+    <text>{{infor.status?infor.status:"无"}}</text> 
+  </view>
+  <view class="item">
+    <text>School：</text>
+    <text >{{infor.school?infor.school:"无"}}</text> 
+  </view>
+  <view class="item">
+    <text>Project：</text>
+    <text >{{infor.project?infor.project:"无"}}</text> 
+  </view>
+  <view class="item">
+    <text>Team Name：</text>
+    <text>{{infor.radio?infor.radio:"无"}}</text> 
+  </view>
+</view>
+<!--
+<view>
+  <button hidden="{{focus_u}}" bindtap="focus_user">关注</button> 
+  <button hidden="{{!focus_u}}">已经关注</button> 
+</view>
+-->

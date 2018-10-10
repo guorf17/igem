@@ -1,0 +1,31 @@
+<!--pages/newa/newa.wxml--> 
+<view class="page">
+
+  <view class="block">
+    <view class="title">
+      <image style="height:50rpx; width:50rpx" src="/images/shui.png" ></image>
+      <text class='title'>about the author</text>
+    </view>
+    <view class="content">
+      <text>"Biocompany"--This small program is jointly developed by three members of SZU_CHINA. The ITers include: Xie Xiaohan, Guo Roufeng, Liu Yishu. All three of us are junior at Shenzhen University.</text><text>This small program is designed to contact the research team and the general public. If there are any bugs in the process, please contact us. I hope you can enjoy this small program, thank you.</text>
+   
+    </view>
+  </view>
+
+
+
+  <view class="block">
+    <view class="title">
+      <image style="height:50rpx; width:50rpx" src="/images/lainxi.png" ></image>
+      <text class='title'>Contact information</text>
+    </view>
+    <view class="content">
+      <text>Email:</text><text selectable='true'>2230398176@qq.com</text>
+      <text selectable='true'>1042529657@qq.com</text>
+      <text selectable='true'>173094174@qq.com</text>
+      <text>In order to facilitate communication, please indicate your name and intention in detail when sending emails.</text>
+      <text>Welcome cooperation, investment partners to bomb the mailbox ~</text>
+    </view>
+  </view>  
+</view>
+<button bindtap='into_dashang'>Support us</button>

@@ -1,0 +1,14 @@
+<!--pages/newa/newa.wxml--> 
+<form bindsubmit="formSubmit">
+  <text class='title'>Comment：</text>
+  <textarea name="detail" placeholder="Please enter a comment" />
+  <view style="display:block;">
+    <text class='title'>Click to upload image:</text>
+    <image style="height:50rpx; width:50rpx" src="/images/upload56.png" bindtap='UploadPicture'></image>
+  </view>
+  <text class='title'>Uploaded image:</text>
+  <block wx:for="{{pictures}}" wx:for-index="idx" wx:for-item="item">
+    <image src="{{item}}" style="height:100rpx; width:100rpx"></image>
+  </block>
+  <button  formType="submit">Send</button>
+</form>

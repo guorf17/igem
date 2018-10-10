@@ -1,0 +1,69 @@
+<!--电台头像和名称-->
+<view class="myradio">
+  <view class="ava flex-item">
+    <image class="myradio-avatar" src="{{touxiang}}" background-size="cover"></image>
+    <button wx:if="{{myavid==thisavid}}" class="myradio-button" size='mini' catchtap='upload_ds'>Reward Code</button> 
+    <!--
+    <button  wx:if="{{myavid==thisavid}}" class = "myradio-guanli-button">manage</button>
+    -->
+  </view>
+  <view class="myradio-name flex-item">
+    <text>{{ming}}</text>
+    <text>{{avid}}</text>
+  </view>
+
+</view>
+
+<!--循环输出数据库里的ideas-->
+<view class="row-container" bindtap='click_into_content'>
+  <view class="content-wrapper">
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+
+    <!-- List Item begin -->
+     <!--看能不能设置一个tap变量，当没点击manage按钮时不显现删除按钮，点击idea封面进入内容。
+    当点击manage按钮时显示删除按钮，并且页面点击不会进入内容，而是删除操作 -->
+      <view class="content-list" bindtap="into_content">
+        <view class="item">
+          <view class="top flex-wrp">
+
+   <!--删除按钮，删除我的团队下某个idea-->
+   <!--1、删除按钮显示条件：登陆了当前团队账号时：wx:if="{{myavid==thisavid}}"
+      
+   -->
+        <view class='delete-img'>
+            <image wx:if="{{myavid==thisavid}}" class = "delete" src="/images/icons/delete.png" data-iid="{{item.idea_id}}" catchtap='deleteIdea' ></image>
+        </view>
+
+
+            <view class="idea" style="opacity: 1" bindtap="bindQueTap" data-iid="{{item.idea_id}}">
+              <image  src ="{{item.cover}}" mode='aspectFill'></image>
+            </view>
+          </view>
+
+
+          <view class="info">
+            <view class="title">{{item.title}}</view> 
+            </view>
+            </view>
+      <!--  </navigator>   -->
+      </view>
+    </block>
+  </view>
+</view>
+
+
+
+<!--弹出框-->
+<modal title="First use guide" hidden="{{hiddenModal}}" confirm-text="Finished" bindconfirm="listenerConfirm" no-cancel>
+<view class="guide">
+     <text> The appreciation code is generated like this.：</text>
+     <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:700rpx;">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+     </view>
+     </modal>

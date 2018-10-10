@@ -1,0 +1,44 @@
+/* pages/shouquan/shouquan.wxss */
+
+.container-shouquan{
+  background-color: white;
+  background-image: url(https://colorlib.com/etc/lf/Login_v12/images/img-01.jpg);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.container-shouquan::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #005bea;
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -o-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
+    background: linear-gradient(bottom, #005bea, #00c6fb);
+    opacity: 0.9;
+}
+
+.button{
+  margin-bottom:250rpx;
+  height: 100rpx;
+  width: 400rpx; 
+}

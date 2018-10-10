@@ -1,0 +1,3 @@
+<view class="container-shouquan">
+  <button class="button" plain='ture' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">Authorized login</button>
+</view>

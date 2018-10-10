@@ -1,0 +1,60 @@
+page {
+  padding-top: 40rpx;
+  width: 90%;
+  margin: 0 auto;
+}
+
+input {
+  display: inline-block;
+  border: 1px solid;
+  vertical-align: middle;
+  height: 80rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+}
+
+.upload-img view {
+  text-align: center;
+}
+
+.upload-img image {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+text {
+  margin-top: 40rpx;
+  color: #555;
+}
+
+.insert{
+  margin-bottom: 20rpx;
+  text-align: center; 
+}
+
+view {
+  margin-top: 40rpx;
+ 
+}
+
+
+textarea {
+     width: 100%;
+    height: 420rpx;
+    padding: 14rpx 20rpx;
+    border-radius: 2rpx;
+    border: 1px solid #bbc0c4;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 28rpx;
+    color: #3b4045;
+    box-shadow: inset 0 2rpx 6rpx #eff0f1;
+    background: #FFF;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing:border-box;
+}
+
+.list{
+  margin-bottom: 30rpx;
+}

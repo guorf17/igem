@@ -1,0 +1,172 @@
+::-webkit-scrollbar  
+{  
+    width: 0;  
+    height: 0; 
+    color: transparent;  
+}  
+
+/**index.wxss**/
+
+.container{
+  height: 1500rpx;
+}
+.container .search{
+  width: 735rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: #6495ED;
+}
+.container .search .search-left{
+  flex: 8;
+  background:#fff;
+  text-align:left;
+  border-radius:32rpx;
+
+}
+.container .search .search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+  width: 550rpx;
+}
+
+.container .search .search-left .placeholder{
+  color: #999;
+  line-height: 20rpx;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 6rpx;
+}
+
+/*
+.search-placeholder{
+  color: #8CCEFD;
+  line-height: 20rpx;
+  margin-top: 6rpx;
+}
+*/
+.container .search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.container .search .search-right{
+  flex: 1;
+}
+.container .search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  background: #F0F4F3;
+  color: #000;
+}
+
+.content-wrapper{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container .feed-item{
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0rpx 30rpx 0rpx;
+  margin: 10rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+
+.container .feed-item .feed-source{
+  width: 550rpx;
+  left: 0;
+  height: 50rpx;
+}
+
+.container .feed-item .feed-content .answer-actions{
+  position: absolute;
+  bottom: 11rpx;
+  width: 690rpx;
+  padding: 10rpx 0  0;
+  color: #a0acac;
+  display: flex;
+}
+
+.answer-actions .like image, .comments image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 14rpx;
+}
+
+
+.answer-actions .like, .comments{
+  margin-right: 100rpx;
+}
+
+.container .feed-item .feed-source a{
+  vertical-align: middle;
+  display: inline-block;
+  height: 40rpx;
+  margin-right: 20rpx;
+  overflow-x: hidden; 
+}
+
+.avatar {
+  width: 100rpx;
+  height: 165rpx;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 30rpx;
+  padding-top:8px;
+  padding-bottom: 5rpx;
+  box-sizing:border-box;
+}
+.avatar image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+  }
+
+  .avatar .textname {
+    width: 100rpx;
+    height: 30rpx;
+    font-size: 17rpx;
+    text-align: center;
+    margin-bottom: 5rpx;
+    margin-top: 5rpx;
+    overflow: hidden; 
+    box-sizing: border-box; 
+    display: -webkit-box; 
+    word-break: break-all; 
+    text-overflow: ellipsis; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 3;
+  }
+
+  .item-more {
+    position: absolute;
+    width: 50rpx;
+    height: 40rpx;
+    right: 26rpx;
+  }
+
+  .answer-text{
+overflow: hidden; 
+box-sizing: border-box; 
+display: -webkit-box; 
+word-break: break-all; 
+text-overflow: ellipsis; 
+-webkit-box-orient: vertical; 
+-webkit-line-clamp: 3;
+font-size: 25rpx;
+}
+/*feed-item part is in app.wxss for multiplexing*/

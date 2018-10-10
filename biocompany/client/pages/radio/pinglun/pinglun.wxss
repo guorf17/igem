@@ -1,0 +1,44 @@
+page {
+  width: 90%;
+  margin: 20rpx auto 0;
+}
+.title {
+  margin-bottom: 10rpx;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+
+textarea {
+    width: 100%;
+    height: 900rpx;
+    padding: 14rpx 20rpx;
+    border-radius: 2rpx;
+    border: 1px solid #bbc0c4;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 28rpx;
+    color: #3b4045;
+    box-shadow: inset 0 2rpx 6rpx #eff0f1;
+    background: #FFF;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing:border-box;
+    margin-bottom: 10rpx;
+}
+
+image {
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+button {
+ height:100rpx;
+  width:350rpx;
+  font-size:35rpx;
+  background-color:#333333;
+  color:#fff;
+  line-height:100rpx;
+  border-radius:50rpx;
+  box-shadow:0 5px 30px 0px rgba(0, 0, 0, 0.3);
+  margin-top:20rpx;
+}
